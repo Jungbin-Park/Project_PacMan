@@ -28,13 +28,14 @@ namespace Project_Pacman
 
             Console.CursorVisible = false;
 
-            const int WAIT_TICK = 1000 / 30;
+            //const int WAIT_TICK = 1000 / 30;
 
-            int lastTick = 0;
+            //int lastTick = 0;
 
             while (true)
             {
-                #region
+                /*
+                #region 프레임관리
                 int currentTick = System.Environment.TickCount;
                 int elapsedTick = currentTick - lastTick;
 
@@ -42,7 +43,7 @@ namespace Project_Pacman
                     continue;
                 lastTick = currentTick;
                 #endregion
-
+                */
                 Console.SetCursorPosition(0, 0);
                 gmap.Render();
             }
