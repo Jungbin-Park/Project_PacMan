@@ -46,6 +46,7 @@
     <Compile Include="GameMap.cs" />
     <Compile Include="Intro.cs" />
     <Compile Include="Outro.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
