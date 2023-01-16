@@ -22,6 +22,7 @@ namespace Project_PacMan
         {
             Empty,
             Wall,
+            Null,
         }
 
         public void Initialize(int size)
