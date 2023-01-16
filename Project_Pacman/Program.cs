@@ -40,6 +40,8 @@ namespace Project_Pacman
                         return;
 
                 }
+
+                Console.WriteLine("hi");
             }
         }
     }
