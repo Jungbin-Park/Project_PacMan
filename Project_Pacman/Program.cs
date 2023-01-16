@@ -38,7 +38,7 @@ namespace Project_Pacman
                 int currentTick = System.Environment.TickCount;
                 int elapsedTick = currentTick - lastTick;
 
-                if (elapsedTick < 1000 / 30)
+                if (elapsedTick < WAIT_TICK)
                     continue;
                 lastTick = currentTick;
                 #endregion
