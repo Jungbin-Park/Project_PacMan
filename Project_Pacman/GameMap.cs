@@ -15,7 +15,7 @@ namespace Project_PacMan
         const char SQUARE = '■';
         const char COIN = '*';
 
-        public TileType[,] _tile;
+        static public TileType[,] _tile;
         public int _size;
 
         public enum TileType
@@ -38,9 +38,9 @@ namespace Project_PacMan
                         _tile[y, x] = TileType.Wall;
                         
                     }
-                    else if(y % 2 == 0 && x < _size - 1)
+                    else if(y % 2 == 0)
                     {
-                        if(y % 4 == 0)
+                        if(y % 4 == 0 && x < _size - 1)
                         {
                             _tile[y, x + 1] = TileType.Wall;
                             
@@ -54,6 +54,7 @@ namespace Project_PacMan
                 }
                 Console.WriteLine();
             }
+            
         }
         
         public void Render()
