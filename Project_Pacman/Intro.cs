@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Project_Pacman;
+using Project_PacMan;
 
 namespace PacMan
 {
@@ -11,6 +12,9 @@ namespace PacMan
     {
         public void PrintScreen()
         {
+            GameMap.coinnum = 0;
+            Player.Score= 0;
+
             Console.WriteLine();
             Console.WriteLine("#########          ###            #########            ##        ##              ###          ##          ##");
             Console.WriteLine("##       ##       #####          ##        ##         ####      ####            #####         ###         ##");
@@ -26,16 +30,10 @@ namespace PacMan
             Console.WriteLine("==============================================================================================================");
             Console.WriteLine("\n\n\n\n\n\n\n");
             Console.Write("                                           [Press any key to start]");
-            ConsoleKeyInfo keys;
-            keys = Console.ReadKey();
-            if(keys != null)
-            {
-                Console.Clear();
-                Program.GameScene();
-                
-            }
 
-            
+            Console.ReadKey();
+            Console.Clear();
+            Program.GameScene();
 
         }
        

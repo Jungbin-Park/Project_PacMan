@@ -11,28 +11,28 @@ namespace Project_Pacman
 {
     internal class Program
     {
+        static public bool gameisRun;
         private static void Main(string[] args)
         {
             Intro intro = new Intro();
             Outro outro = new Outro();
             intro.PrintScreen();
-            
-            //outro.OutroScene();
         }
 
         static public void GameScene()
         {
-            int size = 11;
+            gameisRun = true;
             GameMap gmap = new GameMap();
+            int size = 11;
             gmap.Initialize(size);
             Console.CursorVisible = false;
 
-            while (true)
+            while (gameisRun)
             {
                 Console.SetCursorPosition(0, 0);
                 gmap.Render();
             }
         }
-       
+
     }
 }
