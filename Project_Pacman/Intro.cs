@@ -42,7 +42,6 @@ namespace PacMan
                 ++k;
                 System.Threading.Thread.Sleep(10);
             }
-            //Console.Write("                                           [Press any key to start]");
             Console.WriteLine("\n\n\n\n\n");
             int j = 1;
             while (j <= 110)
