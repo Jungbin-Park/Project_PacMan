@@ -1,3 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Project_Pacman;
+using Project_PacMan;
+using PacMan;
+
 namespace Project_Pacman
 {
     class Outro
@@ -11,7 +20,7 @@ namespace Project_Pacman
 
         public void OutroScene(Intro intro)
         {
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Green;
 
             int result = Player.Score;
             Console.WriteLine();
@@ -47,7 +56,7 @@ namespace Project_Pacman
                     Console.WriteLine("새 게임을 시작합니다");
                     GameKill();
                     Console.Clear();
-                    Intro.PrintScreen();
+                    intro.PrintScreen();
                 }
                 else
                 {
