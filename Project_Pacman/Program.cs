@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using PacMan;
@@ -16,7 +15,16 @@ namespace Project_Pacman
         {
             Intro intro = new Intro();
             Outro outro = new Outro();
+            
             intro.PrintScreen();
+
+            NumArr[,] arr;
+        }
+
+        public enum NumArr
+        {
+            Empty,
+            Wall
         }
 
         static public void GameScene()

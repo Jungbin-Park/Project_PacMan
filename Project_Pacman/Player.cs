@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Project_Pacman;
+using PacMan;
 using Project_PacMan;
 
 namespace Project_Pacman
@@ -15,6 +16,7 @@ namespace Project_Pacman
         public static int Score = 0;
         private Outro outro = new Outro();
         private GameMap gMap = new GameMap();
+        private Intro intro = new Intro();
         
         public void PlayerMove()
         {
@@ -40,7 +42,6 @@ namespace Project_Pacman
                 Console.Write("○");
 
                 ConsoleKeyInfo cki = Console.ReadKey(true);
-
                 switch (cki.Key)
                 {
                     case ConsoleKey.LeftArrow:
@@ -85,7 +86,6 @@ namespace Project_Pacman
                             }
                             break;
                         }
-
 
                         while (y == 5)
                         {
@@ -136,13 +136,10 @@ namespace Project_Pacman
                     case ConsoleKey.Q:
                         Console.Clear();
                         playerisRun = false;
-                        outro.OutroScene();
+                        outro.OutroScene(intro);
                         break;
-                }
+                }       
             }
         }
-
-
-
     }
 }
