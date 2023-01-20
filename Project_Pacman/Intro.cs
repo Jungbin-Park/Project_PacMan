@@ -10,7 +10,7 @@ namespace PacMan
 {
     class Intro
     {
-        public static void PrintScreen()
+        public void PrintScreen()
         {
             GameMap.coinnum = 0;
             Player.Score = 0;
@@ -25,23 +25,29 @@ namespace PacMan
             Console.WriteLine("##           ##           ##     ##        ##       ##              ##     ##           ##    ##         ###");
             Console.WriteLine("##          ##             ##      ########         ##              ##    ##             ##   ##          ##");
 
-
             Console.WriteLine();
             int i = 1;
             while (i <= 110)
             {
                 Console.Write('*');
                 ++i;
-                System.Threading.Thread.Sleep(10);    
+                System.Threading.Thread.Sleep(10);
             }
+
             Console.WriteLine("\n\n\n\n\n");
             int k = 1;
             while (k <= 1)
             {
-                Console.Write("                                         [Press any key to start]");
+                Console.Write("                                         [Press ");
+                System.Threading.Thread.Sleep(300);
+                Console.Write("any key");
+                System.Threading.Thread.Sleep(300);
+                Console.Write(" to start]");
+                System.Threading.Thread.Sleep(300);
+
                 ++k;
-                System.Threading.Thread.Sleep(10);
             }
+
             Console.WriteLine("\n\n\n\n\n");
             int j = 1;
             while (j <= 110)
@@ -54,7 +60,7 @@ namespace PacMan
             Console.ReadKey();
             Console.Clear();
             Program.GameScene();
-            
+
         }
     }
 }
