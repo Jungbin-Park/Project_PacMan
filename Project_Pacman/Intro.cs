@@ -13,25 +13,27 @@ namespace PacMan
     {
         public void PrintScreen()
         {
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             GameMap.coinnum = 0;
             Player.Score = 0;
 
             Console.WriteLine();
-            Console.WriteLine("#########          ###            #########            ##        ##              ###          ##          ##");
-            Console.WriteLine("##       ##       #####          ##        ##         ####      ####            #####         ###         ##");
-            Console.WriteLine("##       ##      ##   ##        ##          ##       ##   ##  ##   ##          ##   ##        ##  #       ##");
-            Console.WriteLine("##      ##      ##     ##       ##                  ##      ##      ##        ##     ##       ##   #      ##");
-            Console.WriteLine("########       ###########      ##                  ##      ##      ##       ###########      ##    ##    ##");
-            Console.WriteLine("##            ##         ##     ##                  ##              ##      ##         ##     ##      ##  ##");
-            Console.WriteLine("##           ##           ##     ##        ##       ##              ##     ##           ##    ##         ###");
-            Console.WriteLine("##          ##             ##      ########         ##              ##    ##             ##   ##          ##");
+            Console.WriteLine("    #########          ###            #########            ##        ##              ###          ##          ##");
+            Console.WriteLine("    ##       ##       #####          ##        ##         ####      ####            #####         ###         ##");
+            Console.WriteLine("    ##       ##      ##   ##        ##          ##       ##   ##  ##   ##          ##   ##        ##  #       ##");
+            Console.WriteLine("    ##      ##      ##     ##       ##                  ##      ##      ##        ##     ##       ##   #      ##");
+            Console.WriteLine("    ########       ###########      ##                  ##      ##      ##       ###########      ##    ##    ##");
+            Console.WriteLine("    ##            ##         ##     ##                  ##              ##      ##         ##     ##      ##  ##");
+            Console.WriteLine("    ##           ##           ##     ##        ##       ##              ##     ##           ##    ##         ###");
+            Console.WriteLine("    ##          ##             ##      ########         ##              ##    ##             ##   ##          ##");
             Console.WriteLine();
 
 
             int i = 1;
-            while (i <= 110)
+            while (i <= 60)
             {
                 Console.Write('*');
+                Console.Write(' ');
                 ++i;
                 System.Threading.Thread.Sleep(5);
             }
@@ -53,9 +55,10 @@ namespace PacMan
 
             Console.WriteLine("\n\n\n\n\n");
             int j = 1;
-            while (j <= 110)
+            while (j <= 60)
             {
                 Console.Write('*');
+                Console.Write(' ');
                 ++j;
                 System.Threading.Thread.Sleep(5);
             }
