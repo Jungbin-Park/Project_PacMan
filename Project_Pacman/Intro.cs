@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Project_Pacman;
 using Project_PacMan;
+using System.Net.Http;
 
 namespace PacMan
 {
@@ -24,26 +25,28 @@ namespace PacMan
             Console.WriteLine("##            ##         ##     ##                  ##              ##      ##         ##     ##      ##  ##");
             Console.WriteLine("##           ##           ##     ##        ##       ##              ##     ##           ##    ##         ###");
             Console.WriteLine("##          ##             ##      ########         ##              ##    ##             ##   ##          ##");
-
             Console.WriteLine();
+
+
             int i = 1;
             while (i <= 110)
             {
                 Console.Write('*');
                 ++i;
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(5);
             }
+
 
             Console.WriteLine("\n\n\n\n\n");
             int k = 1;
             while (k <= 1)
             {
                 Console.Write("                                         [Press ");
-                System.Threading.Thread.Sleep(300);
-                Console.Write("any key");
-                System.Threading.Thread.Sleep(300);
-                Console.Write(" to start]");
-                System.Threading.Thread.Sleep(300);
+                System.Threading.Thread.Sleep(500);
+                Console.Write("Y - start");
+                System.Threading.Thread.Sleep(500);
+                Console.Write(" / N - End]");
+                System.Threading.Thread.Sleep(500);
 
                 ++k;
             }
@@ -54,13 +57,28 @@ namespace PacMan
             {
                 Console.Write('*');
                 ++j;
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(5);
             }
 
-            Console.ReadKey();
-            Console.Clear();
-            Program.GameScene();
+            for (; ; )
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo cki;
+                    cki = Console.ReadKey();
+                    if (cki.Key == ConsoleKey.Y)
+                    {
 
+                        Console.Clear();
+                        Program.GameScene();
+                    }
+                    if (cki.Key == ConsoleKey.N)
+                    {
+                        break;
+                    }
+                }
+                System.Threading.Thread.Sleep(100);
+            }
         }
     }
 }
