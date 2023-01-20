@@ -13,7 +13,7 @@ namespace PacMan
     {
         public void PrintScreen()
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Green;
             GameMap.coinnum = 0;
             Player.Score = 0;
 
